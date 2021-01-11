@@ -69,17 +69,22 @@ movies[0].genres[0];
 movies[1].genres[0];
 
 // 16. Log the last genres of the first movie (using the length property of array)
-movies[0].genres[2]
+movies[0].genres[movies[0].genres.length-1]
 
 
 // 17. Log the first genres of the second movie (using the length property of array)
-console.log(movies[1].genres[genres.length - 1 ]);
+movies[0].genres[movies[0].genres.length-1]
+
 
 // 18. Log all the genres of the first movie one by one
 movies[0].genres.forEach(genres => console.log(genres));
 
 // 19. Log all the genres of the second movie one by one
 movies[1].genres.forEach(genres => console.log(genres));
+// another way
+for(genre of movies[1].genres){
+  console.log(genre);
+}
 
 // 20. Log if the first actor of the first movie is `Rachel McAdams` or not (You have to log true or false)
 if(movies[0].actors[0] === "Rachel McAdams"){
@@ -141,3 +146,9 @@ movies.filter(actor => {
   }
 });
 // 30. Log the name of all the movies with year `2018`
+for(movie of movies){
+  if(movie.year == 2018){
+
+    console.log(movie.year);
+  }
+}
